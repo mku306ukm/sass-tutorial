@@ -1,0 +1,14 @@
+{
+  "name": "sasstut",
+  "version": "1.0.0",
+  "description": "learning",
+  "main": "index.js",
+  "scripts": {
+   "start" : "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "umesh",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

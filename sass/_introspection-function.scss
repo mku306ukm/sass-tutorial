@@ -1,0 +1,35 @@
+$num: 10px;
+$char: "Arial";
+$list: 10px 20px 30px;
+$map: ("regular" : 400, "medium" : 500);
+
+@mixin border-radius{
+    border-radius: 5px;
+}
+
+@function add($a, $b){
+    @return $a + $b;
+}
+
+// =)
+.test{
+    $num: 10px;
+    padding: variable-exists(num);
+}
+
+.test{
+    padding: global-variable-exists(num);
+}
+// y global value h to true show karega aur local h to false
+
+.test{
+    padding: mixin-exists(border-radius);
+}
+
+.test{
+    padding: function-exists(add);
+}
+
+.test{
+    padding: type-of($char);
+}

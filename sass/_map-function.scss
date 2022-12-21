@@ -1,0 +1,39 @@
+$font-weights : ("regular" : 400, "medium" : 500, "bold" : 700);
+
+$light-weights : ("lightest" : 100, "light" : 300);
+
+.test{
+    font-weight: map-get($font-weights, bold );
+}
+.test{
+    font-weight: map-keys($font-weights);
+}
+.test{
+    font-weight: map-values($font-weights);
+}
+
+$merge: map-merge($font-weights, $light-weights);
+
+.test{
+    font-weight: map-keys($merge);
+}
+.test{
+    font-weight: map-values($merge);
+}
+//map-merge do map ko merge krne ke kam me ata h
+
+$mr : map-remove($font-weights, "bold");
+.test{
+    font-weight: map-values($mr);
+}
+
+// ===map-has-key===
+.test{
+    font-weight: map-has-key($font-weights,"bold");
+}
+
+// ===list-function or nth===
+.test{
+    font-weight: nth($font-weights,3);
+}
+

@@ -1,0 +1,33 @@
+//===equality operator=== 
+// .abc{
+//     padding: 10px == 10px;
+// }
+// --equal to--
+
+// .abc{
+//     padding: 10px != 10px;
+// }
+// --not equal to--
+
+// ===relational operator===
+
+// .abc{
+//     padding: 10px > 20px;
+// }
+
+// .abc{
+//     padding: 1000ms >= 1s;
+// }
+
+// ===boolean operator===
+// .abc{
+//     margin: 10 == 10 and 20px == 20px;
+// }
+
+// .abc{
+//     margin: 10 == 10 or 20px == 30px;
+// }
+
+// .abc{
+//     margin: not 20 == 20px; 
+// }

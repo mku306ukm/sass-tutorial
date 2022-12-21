@@ -1,0 +1,67 @@
+$list : 10px 20px 30px;
+
+$list2 : 40px 50px 60px;
+
+.test {
+    padding: length($list)
+}
+
+.test {
+    padding: nth($list, -1)
+}
+
+.test {
+    padding: set-nth($list, 2, 3%)
+}
+// existing value ke under new value add karne ke liye
+// 2.kis jgah pr
+// 3. kya value add karna h
+
+.test {
+    padding: join($list, $list2)
+}
+
+.test {
+    padding: join(1 2 3, 4 5)
+}
+
+.test {
+    padding: join((1, 2, 3), (4 5), space)
+}
+
+// space comma ko hata dega
+.test {
+    padding: join((1 2 3), (4 5 6), comma)
+}
+
+.test {
+    padding: append($list, 70px, comma);
+}
+// append ek hi value ko add karta h aur wo v and me
+
+.test {
+    padding: append((red, green), blue);
+}
+
+.test {
+    padding: zip($list, $list2);
+}
+//zip-first wale ko first se second wale ko second se combine kar dega......
+
+.test {
+    padding: zip((red, green, blue), (1px, 2px, 3px));
+}
+
+.test {
+    padding: index($list, 30px);
+}
+
+.test {
+    padding: list-separator($list);
+}
+// ye check karega ki comma h ya space
+
+.test {
+    padding: is-bracketed($list);
+}
+// y bracket check karega ki h ya ni

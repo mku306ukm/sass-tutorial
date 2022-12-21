@@ -1,0 +1,44 @@
+.container{
+    width: 1100px;
+    margin: 0px auto;
+   
+    @media screen and (max-width : 1150px){
+        width: 900px;
+        background: red;
+    }
+    
+    @media screen and (max-width : 950px){
+        width: 700px;
+        background: green;
+    }
+}
+
+// 2
+.item{
+    color: red;
+
+    // @at-root{
+        .item-wrapper{
+            color : green;
+        img{
+            width: 100%;
+        }
+    }
+// }
+    .item-child{
+        background: pink;
+    }
+}
+// 3
+@media print{
+    .container{
+        font-size: 12px;
+        color: green;
+
+        @at-root(without : media){
+            font-size: 15px;
+            color: black;
+        }
+        // website(container) ka font 15px rhega lekin @media print, ke liye font 12px ho jayega 
+    }
+}

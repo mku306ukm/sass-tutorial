@@ -1,0 +1,25 @@
+
+div {
+    margin: 0 0 15px 15px;
+}
+
+#first {
+    background: blue;
+    width: 300px;
+    padding: 15px;
+    font-family: arial;
+    font-size: 16px;
+    margin: 0 0 15px 15px;
+}
+
+#second {
+    background: rgb(21, 255, 0);
+    width: 400px;
+    @extend #first;
+}
+
+#third {
+    background: rgb(255, 0, 64);
+    width: 600px;
+    @extend #first;
+}
