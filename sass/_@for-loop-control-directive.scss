@@ -1,7 +1,0 @@
-@for $i from 1 through 3{
-    .list-#{$i}{
-        width: 100px * $i;
-        background-color: darken(pink, $i * 10%);
-        padding: 10px * $i;
-    }
-}
