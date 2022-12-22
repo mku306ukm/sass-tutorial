@@ -1,0 +1,12 @@
+@import 'colors';
+.navbar{
+    background: $light;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vw - 1000px) / 2);
+}
+// %- ye apne parent ke div par ya windows(browser) ke screen pr depend karta h
+// em- aur rem- font size dene ke kam me ata h
+// em- ye apne parent ke according kam aata h (1em=16px)
+// rem- ye parent ke according kam nahi karta h ye ya to browser ke according kam krtha h ya to root(main <html> tag) ke according
