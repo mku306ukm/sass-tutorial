@@ -1,12 +1,79 @@
 @import 'colors';
-.navbar{
+@import 'media-queries';
+
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+// %-ise placeholder selector kahte h ye mixin ke jaisa hi h lekin y koi parameter nahi leta h, y chhota css likhne ke kam ata h
+
+
+.navbar {
     background: $light;
     height: 80px;
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem calc((100vw - 1000px) / 2);
+    padding: 0.5rem calc((100vw - 1200px) / 2);
+
+    &__logo {
+        color: $dark;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-left: 24px;
+        @extend %align-center;
+    }
+
+    &__bars {
+        opacity: 0;
+
+        @include tablet {
+            color: $dark;
+            opacity: 1;
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            font-size: 2rem;
+        }
+    }
+
+    &__menu {
+        @extend %align-center;
+        margin-right: 24px;
+
+        @include tablet {
+            display: none;
+        }
+
+        &--links {
+            color: $dark;
+            @extend %align-center;
+            text-decoration: none;
+            padding: 0 1rem;
+
+            &:hover {
+                color: $lime;
+                transition: all 0.3s ease;
+                // all-sav property ke liye kam krta h(like width,height, color)
+                // ease-slow start, then fast, then end slowly
+            }
+        }
+
+        #button {
+            padding: 12px 24px;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            background: $lime;
+            margin-left: 16px;
+            color: $light;
+
+            &:hover {
+                background: $orangeRed;
+                transition: all 0.3s ease;
+
+            }
+        }
+
+    }
 }
-// %- ye apne parent ke div par ya windows(browser) ke screen pr depend karta h
-// em- aur rem- font size dene ke kam me ata h
-// em- ye apne parent ke according kam aata h (1em=16px)
-// rem- ye parent ke according kam nahi karta h ye ya to browser ke according kam krtha h ya to root(main <html> tag) ke according
