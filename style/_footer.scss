@@ -1,11 +1,13 @@
-.footer {
-    padding: 5px;
-    background: $green;
-    font-size: 12.5px;
+.footer{
+    padding: 45px;
+    background: $gray;
+    margin-top: 10px;
 
     @include mobile{
-        width: 320px;
-        position: sticky;
-        bottom: 0px;
+        padding: 30px;
+    }
+
+    & h2{
+        text-align: center;
     }
 }

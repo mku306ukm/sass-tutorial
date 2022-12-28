@@ -1,5 +1,7 @@
 @import '_navbar';
 @import '_footer';
+@import '_header';
+@import '_contant';
 
 * {
     box-sizing: border-box;
@@ -9,71 +11,3 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-// Hero Section CSS
-.hero {
-    &__sidebar {
-        display: grid;
-        grid-template-columns: 0.5fr 2fr 0.5fr;
-
-        @include mobile{
-            grid-template-columns: 1fr;
-        }
-
-        &--left {
-            background: $dark;
-            padding: 0 10px;
-            width: 150px;
-            height: 235px;
-            font-size: 12.5px;
-
-            @include mobile{
-                display: none;
-            }
-
-            & h4{
-                margin-bottom: 8px;
-            }
-        }
-
-        &--right {
-            background: $pink;
-            padding: 0 5px;
-            width: 150px;
-            font-size: 12.5px;
-            height: 80px;
-            // display: flex;
-            // flex-direction: column;
-
-            @include mobile{
-                display: none;
-            }
-
-            & h4{
-                margin-bottom: 8px;
-            }
-            & a {
-                text-decoration: none;
-                line-height: 1.5;
-                font-size: 12.5px;
-            }
-        }
-
-    }
-
-    &__content {
-        padding: 0 10px;
-        font-size: 12.5px;
-        height: 400px;
-        line-height: 1.3;
-        margin-bottom: 15px;
-
-        @include mobile{
-            width: 315px;
-            height: 480px;
-        }
-
-        & h4{
-            margin-bottom: 8px;
-        }
-    }
-}

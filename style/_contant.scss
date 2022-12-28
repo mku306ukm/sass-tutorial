@@ -1,0 +1,96 @@
+@import '_colors';
+@import '_media-queries';
+
+.contant {
+    display: flex;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__part__left {
+
+        &--up {
+            background: $white;
+            padding: 30px 20px;
+            margin: 15px 0;
+
+            & h2 {
+                padding: 20px 0px 10px;
+            }
+
+            & h5 {
+                padding: 20px 0px;
+            }
+
+            & p {
+                padding: 10px 0;
+            }
+
+            & #image {
+                height: 200px;
+                background: $image;
+                width: 100%;
+                padding: 20px;
+            }
+        }
+
+        &--down {
+            @extend .contant__part__left--up;
+        }
+    }
+
+    &__part__right {
+        &--up {
+            background: $white;
+            padding: 30px 20px;
+            margin: 15px 0 15px 15px;
+
+            @include mobile {
+                margin: 15px 0px;
+
+            }
+
+            & h2 {
+                padding: 20px 0px 20px;
+            }
+
+            & p {
+                padding: 20px 0;
+            }
+
+            & #image3 {
+                height: 100px;
+                background: $image;
+                padding: 20px;
+            }
+        }
+
+        &--middle {
+           
+            @extend .contant__part__right--up;
+
+            & h3 {
+                padding: 20px 0px 20px;
+            }
+
+            & #image4 {
+                height: 300px;
+                background: $image;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 0 20px;
+            }
+        }
+
+        &--down {
+            @extend .contant__part__right--up;
+            
+            & h3 {
+                padding: 15px 0;
+            }
+        }
+    }
+}
