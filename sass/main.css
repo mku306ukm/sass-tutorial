@@ -1,1 +1,55 @@
-/*# sourceMappingURL=main.css.map */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../image/mountain.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.header__logo--box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.header__logo--box img {
+  height: 70px;
+}
+.header__text--box {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  background-color: red;
+}
+.header__heading__primary {
+  color: #FFF;
+  text-transform: uppercase;
+}
+.header__heading__primary--main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+.header__heading__primary--sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 16.5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border and padding not add */
+}
+
+body {
+  font-family: "lato" sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}/*# sourceMappingURL=main.css.map */
